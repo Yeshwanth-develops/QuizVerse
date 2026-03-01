@@ -4,8 +4,9 @@ A full-stack quiz application with role-based access control, admin dashboard, r
 
 Built using React + Firebase (Auth + Firestore).
 
-🚀 Features
-👤 User Features
+## 🚀 Features
+
+### 👤 User Features
 
 Register using 5-digit PSID
 
@@ -29,7 +30,7 @@ Recent attempts
 
 Restricted quizzes hidden automatically
 
-🛡️ Admin Features
+###🛡️ Admin Features
 
 Admin dashboard with:
 
@@ -57,8 +58,9 @@ Delete users
 
 Role-based Firestore security rules
 
-🏗️ Tech Stack
-Frontend
+## 🏗️ Tech Stack
+
+### Frontend
 
 React
 
@@ -68,7 +70,7 @@ Context API
 
 Modern UI (custom styled components)
 
-Backend
+### Backend
 
 Firebase Authentication
 
@@ -76,7 +78,7 @@ Cloud Firestore
 
 Firestore Security Rules
 
-🔐 Role-Based Access Control
+## 🔐 Role-Based Access Control
 
 Role	Permissions
 
@@ -86,7 +88,7 @@ Admin	Manage users, manage quizzes, assign restrictions
 
 Security is enforced using Firestore Rules — not just frontend logic.
 
-⏱️ Quiz Flow
+## ⏱️ Quiz Flow
 
 User selects quiz
 
@@ -100,7 +102,7 @@ Attempt stored in Firestore
 
 Dashboard updates in real-time
 
-📊 Admin Dashboard Overview
+## 📊 Admin Dashboard Overview
 
 User count
 
@@ -114,7 +116,8 @@ Manage users panel
 
 Manage quizzes panel
 
-🔒 Firestore Data Structure
+##🔒 Firestore Data Structure
+
 users
 users/{uid}
   - name
@@ -143,18 +146,18 @@ psidIndex/{psid}
   - uid
   - email
 
-🔧 Installation
+## 🔧 Installation
 
-1️⃣ Clone the repository
+### 1️⃣ Clone the repository
 git clone https://github.com/Yeshwanth-develops/QuizVerse.git
 
 cd quizmaster
 
-2️⃣ Install dependencies
+### 2️⃣ Install dependencies
 
 npm install
 
-3️⃣ Configure Firebase
+### 3️⃣ Configure Firebase
 
 Create a .env file:
 
@@ -170,11 +173,11 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender
 
 VITE_FIREBASE_APP_ID=your_app_id
 
-4️⃣ Run the project
+### 4️⃣ Run the project
 
 npm run dev
 
-🛡️ Security Highlights
+## 🛡️ Security Highlights
 
 PSID-based authentication layer
 
@@ -188,7 +191,7 @@ Restricted quiz visibility control
 
 Self-role modification protection
 
-📈 Future Improvements
+## 📈 Future Improvements
 
 Email notifications
 
@@ -206,21 +209,15 @@ Soft delete users
 
 Password reset via PSID
 
-📸 Screenshots
+## 📸 Screenshots
 
-(Add your screenshots here)
+<img width="613" height="425" alt="Welcome Page" src="https://github.com/user-attachments/assets/30220ad8-2046-4704-97e6-45a31567ae90" />
 
-User Dashboard
+<img width="434" height="315" alt="Login Page" src="https://github.com/user-attachments/assets/e3a333c9-90d7-4e8f-80ff-7af289e06b8d" />
 
-Admin Dashboard
+<img width="944" height="460" alt="Dashboard" src="https://github.com/user-attachments/assets/8d0a20fc-0762-4257-95ce-a9674ab1183a" />
 
-Quiz Attempt Screen
-
-Manage Users Panel
-
-Restriction Assignment UI
-
-🎓 Learning Outcomes
+## 🎓 Learning Outcomes
 
 This project demonstrates:
 
@@ -234,7 +231,7 @@ Complex UI state management
 
 Real-world LMS-style access control
 
-👨‍💻 Author
+## 👨‍💻 Author
 
 Yeshwanth Sunkara
 B.Tech Student | Full Stack & AI Enthusiast
