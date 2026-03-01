@@ -1,0 +1,50 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /* ---------- AUTH CHECK ---------- */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == "admin";
+    }
+
+    /* ---------- PSID INDEX ---------- */
+    match /psidIndex/{psid} {
+      allow create: if isSignedIn();
+      allow read: if true;
+      allow write, delete: if false;
+    }
+
+    /* ---------- USERS ---------- */
+    match /users/{userId} {
+      allow read, update: if isSignedIn() && request.auth.uid == userId;
+      allow create: if isSignedIn();
+      allow delete: if false;
+    }
+
+    /* ---------- QUIZZES ---------- */
+    match /quizzes/{quizId} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isAdmin();
+
+      /* Questions as subcollection */
+      match /questions/{questionId} {
+        allow read: if isSignedIn();
+        allow write: if isAdmin();
+      }
+    }
+
+    /* ---------- RESULTS ---------- */
+    match /results/{resultId} {
+      allow create: if isSignedIn();
+      allow read: if isAdmin()
+        || resource.data.userId == request.auth.uid;
+    }
+
+  }
+}
