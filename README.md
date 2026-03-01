@@ -116,15 +116,18 @@ Manage users panel
 
 Manage quizzes panel
 
-##🔒 Firestore Data Structure
+## 🔒 Firestore Data Structure
 
-users
+#### users
+
 users/{uid}
   - name
   - psid
   - email
   - role (user | admin)
-quizzes
+    
+#### quizzes
+
 quizzes/{quizId}
   - title
   - description
@@ -132,7 +135,9 @@ quizzes/{quizId}
   - timeLimit
   - isRestricted
   - assignedUsers[]
-attempts
+    
+#### attempts
+
 attempts/{attemptId}
   - userId
   - quizId
@@ -140,9 +145,9 @@ attempts/{attemptId}
   - percentage
   - createdAt
     
-psidIndex
-psidIndex/{psid}
+#### psidIndex
 
+psidIndex/{psid}
   - uid
   - email
 
