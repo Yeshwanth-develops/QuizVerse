@@ -215,7 +215,8 @@ Password reset via PSID
 
 <img width="434" height="315" alt="Login Page" src="https://github.com/user-attachments/assets/e3a333c9-90d7-4e8f-80ff-7af289e06b8d" />
 
-<img width="944" height="460" alt="Dashboard" src="https://github.com/user-attachments/assets/8d0a20fc-0762-4257-95ce-a9674ab1183a" />
+![Dashboard](https://github.com/user-attachments/assets/f260dc32-9cb3-45ae-9556-1c136939bd5b)
+
 
 ## 🎓 Learning Outcomes
 
