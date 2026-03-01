@@ -30,7 +30,7 @@ Recent attempts
 
 Restricted quizzes hidden automatically
 
-###🛡️ Admin Features
+### 🛡️ Admin Features
 
 Admin dashboard with:
 
